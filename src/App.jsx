@@ -21,7 +21,9 @@ function App() {
   return (
     <>
       <Header />
-      {tours && tours.map((tour, index) => <Cards key={index} tour={tour} />)}
+      <div className="flex">
+        {tours && tours.map((tour, index) => <Cards key={index} tour={tour} />)}
+      </div>
       <Footer />
     </>
   );
