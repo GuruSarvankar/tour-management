@@ -1,6 +1,6 @@
 import HotelImg from "../assets/images/hotel-02.jpeg";
 
-const Cards = () => {
+const Cards = ({ tour }) => {
   return (
     <>
       <div className="w-full mx-auto max-w-screen-xl flex">
@@ -10,12 +10,11 @@ const Cards = () => {
           </a>
           <div className="p-5">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-              Clarion Hotel
+              {tour.title}
             </h5>
 
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
+              {tour.description}
             </p>
             <a
               href="#"
