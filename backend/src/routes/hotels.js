@@ -6,14 +6,13 @@ export function hotelsRoutes(app) {
     try {
       const hotels = await listHotels();
 
-      if (hotels === null) {
+      if (!hotels) {
         return res.status(400).end;
       }
 
       return res.json(hotels);
     } catch (error) {
-      console.error('Error listing hotels', error);
-      return res.status(500).end();
+      return res.status(500).send(`Something went wrong! ${error}`).end();
     }
   });
 }

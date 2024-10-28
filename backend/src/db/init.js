@@ -4,7 +4,7 @@ export function initDatabase() {
   const DATABASE_URL = 'mongodb://localhost:27017/hotel-management';
 
   mongoose.connection.on('open', () => {
-    console.info(
+    console.log(
       `Successfully connected to Hotel Management DB at ${DATABASE_URL}`
     );
   });
